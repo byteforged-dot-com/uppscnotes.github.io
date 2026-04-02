@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPPSC नोट्स – सम्पूर्ण अध्ययन सामग्री</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════
+   ROOT VARIABLES
+══════════════════════════════════════════════ */
+:root {
+  --bg:         #f5f3ee;
+  --surface:    #ffffff;
+  --ink:        #1a1a2e;
+  --muted:      #6b7280;
+
+  --saffron:    #e85d04;
+  --saffron-lt: #fff3ec;
+  --saffron-dk: #c44d00;
+
+  --blue:       #1a3a6b;
+  --blue-mid:   #2563a8;
+  --blue-lt:    #dbeafe;
+
+  --green:      #15622a;
+  --green-lt:   #dcfce7;
+
+  --gold:       #b45309;
+  --gold-lt:    #fef3c7;
+
+  --purple:     #6d28d9;
+  --purple-lt:  #ede9fe;
+
+  --teal:       #0f766e;
+  --teal-lt:    #ccfbf1;
+
+  --rose:       #be123c;
+  --rose-lt:    #ffe4e6;
+
+  --border:     #e5e7eb;
+  --shadow:     rgba(26,26,46,0.10);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans Devanagari', 'Baloo 2', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════════════
+   HERO HEADER
+══════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, #0b1e3d 0%, #1a3a6b 45%, #0f3460 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Ashoka chakra watermark */
+.hero::before {
+  content: '⊕';
+  position: absolute;
+  right: -80px; top: -80px;
+  font-size: 480px;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Tricolor accent bar */
+.tricolor {
+  height: 6px;
+  background: linear-gradient(90deg, #ff9933 33.33%, #ffffff 33.33% 66.66%, #138808 66.66%);
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text {}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,153,51,0.15);
+  border: 1px solid rgba(255,153,51,0.4);
+  color: #ffb347;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.3rem 1rem; border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.hero h1 span { color: #ff9933; }
+
+.hero-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 1rem;
+  max-width: 520px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-stats {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+}
+.stat {
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2rem; font-weight: 800;
+  color: #ff9933; line-height: 1;
+}
+.stat-label {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.78rem; margin-top: 0.2rem;
+}
+
+.hero-badge {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 160px;
+}
+.hero-badge .icon { font-size: 3rem; line-height: 1; }
+.hero-badge p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem; margin-top: 0.5rem;
+  font-family: 'Baloo 2', sans-serif; font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════
+   SEARCH BAR
+══════════════════════════════════════════════ */
+.search-wrap {
+  background: var(--blue);
+  padding: 1.2rem 2rem;
+  border-bottom: 3px solid var(--saffron);
+}
+.search-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; gap: 1rem; align-items: center;
+}
+.search-box {
+  flex: 1;
+  display: flex; align-items: center;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  padding: 0 1rem;
+  gap: 0.6rem;
+}
+.search-box input {
+  flex: 1; background: none; border: none; outline: none;
+  color: #fff; font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.95rem; padding: 0.6rem 0;
+}
+.search-box input::placeholder { color: rgba(255,255,255,0.45); }
+.search-icon { color: rgba(255,255,255,0.5); font-size: 1.1rem; }
+.exam-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.epill {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  font-family: 'Baloo 2', sans-serif; font-size: 0.75rem; font-weight: 600;
+  padding: 0.3rem 0.8rem; border-radius: 100px; cursor: pointer;
+  transition: all 0.2s;
+}
+.epill:hover, .epill.active {
+  background: var(--saffron); border-color: var(--saffron); color: #fff;
+}
+
+/* ══════════════════════════════════════════════
+   MAIN LAYOUT
+══════════════════════════════════════════════ */
+.main-wrap {
+  max-width: 1200px; margin: 0 auto;
+  padding: 2.5rem 2rem 5rem;
+}
+
+/* ══════════════════════════════════════════════
+   SUBJECT SECTION
+══════════════════════════════════════════════ */
+.subject-section { margin-bottom: 3rem; }
+
+.subject-header {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--border);
+  position: relative;
+}
+.subject-header::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 80px; height: 2px;
+}
+
+.subj-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; flex-shrink: 0;
+}
+
+.subject-header h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.3rem; font-weight: 800;
+  line-height: 1.2;
+}
+.subject-header h2 small {
+  display: block; font-size: 0.78rem; font-weight: 500;
+  color: var(--muted); margin-top: 0.1rem;
+}
+.subj-count {
+  margin-left: auto;
+  font-family: 'Baloo 2', sans-serif; font-size: 0.78rem; font-weight: 700;
+  padding: 0.2rem 0.7rem; border-radius: 100px;
+}
+
+/* ══════════════════════════════════════════════
+   CHAPTER CARDS GRID
+══════════════════════════════════════════════ */
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.ch-card {
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1.5px solid var(--border);
+  padding: 1.1rem 1.1rem 0.9rem;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex; flex-direction: column; gap: 0.5rem;
+  transition: all 0.22s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 4px var(--shadow);
+  cursor: pointer;
+}
+.ch-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.ch-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: transparent;
+}
+.ch-card:hover::before { opacity: 1; }
+
+.ch-num {
+  font-family: 'Baloo 2', sans-serif; font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.ch-title {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.9rem; font-weight: 600; line-height: 1.4;
+}
+.ch-meta {
+  display: flex; align-items: center; gap: 0.4rem;
+  margin-top: auto; padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem; color: var(--muted);
+}
+.ch-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.3rem; }
+.ch-tag {
+  font-size: 0.68rem; font-weight: 600;
+  padding: 0.1rem 0.5rem; border-radius: 100px;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+/* ── Status badges ── */
+.badge-done { background: var(--green-lt); color: var(--green); }
+.badge-progress { background: var(--gold-lt); color: var(--gold); }
+.badge-soon { background: var(--border); color: var(--muted); }
+
+/* ══════════════════════════════════════════════
+   COLOUR THEMES PER SUBJECT
+══════════════════════════════════════════════ */
+/* History */
+.theme-history .subj-icon      { background: #fff3ec; }
+.theme-history .subject-header::after { background: var(--saffron); }
+.theme-history .subj-count     { background: var(--saffron-lt); color: var(--saffron); }
+.theme-history .ch-card:hover  { border-color: var(--saffron); }
+.theme-history .ch-card::before{ background: linear-gradient(90deg, var(--saffron), var(--saffron-dk)); }
+.theme-history .ch-num         { color: var(--saffron); }
+
+/* Geography */
+.theme-geo .subj-icon      { background: var(--green-lt); }
+.theme-geo .subject-header::after { background: var(--green); }
+.theme-geo .subj-count     { background: var(--green-lt); color: var(--green); }
+.theme-geo .ch-card:hover  { border-color: var(--green); }
+.theme-geo .ch-card::before{ background: linear-gradient(90deg, var(--green), #22c55e); }
+.theme-geo .ch-num         { color: var(--green); }
+
+/* Polity */
+.theme-polity .subj-icon      { background: var(--blue-lt); }
+.theme-polity .subject-header::after { background: var(--blue-mid); }
+.theme-polity .subj-count     { background: var(--blue-lt); color: var(--blue); }
+.theme-polity .ch-card:hover  { border-color: var(--blue-mid); }
+.theme-polity .ch-card::before{ background: linear-gradient(90deg, var(--blue), var(--blue-mid)); }
+.theme-polity .ch-num         { color: var(--blue-mid); }
+
+/* Economy */
+.theme-eco .subj-icon      { background: var(--gold-lt); }
+.theme-eco .subject-header::after { background: var(--gold); }
+.theme-eco .subj-count     { background: var(--gold-lt); color: var(--gold); }
+.theme-eco .ch-card:hover  { border-color: var(--gold); }
+.theme-eco .ch-card::before{ background: linear-gradient(90deg, var(--gold), #f59e0b); }
+.theme-eco .ch-num         { color: var(--gold); }
+
+/* Science & Tech */
+.theme-sci .subj-icon      { background: var(--teal-lt); }
+.theme-sci .subject-header::after { background: var(--teal); }
+.theme-sci .subj-count     { background: var(--teal-lt); color: var(--teal); }
+.theme-sci .ch-card:hover  { border-color: var(--teal); }
+.theme-sci .ch-card::before{ background: linear-gradient(90deg, var(--teal), #14b8a6); }
+.theme-sci .ch-num         { color: var(--teal); }
+
+/* Environment */
+.theme-env .subj-icon      { background: #f0fdf4; }
+.theme-env .subject-header::after { background: #16a34a; }
+.theme-env .subj-count     { background: #f0fdf4; color: #16a34a; }
+.theme-env .ch-card:hover  { border-color: #16a34a; }
+.theme-env .ch-card::before{ background: linear-gradient(90deg, #16a34a, #4ade80); }
+.theme-env .ch-num         { color: #16a34a; }
+
+/* Art & Culture */
+.theme-art .subj-icon      { background: var(--purple-lt); }
+.theme-art .subject-header::after { background: var(--purple); }
+.theme-art .subj-count     { background: var(--purple-lt); color: var(--purple); }
+.theme-art .ch-card:hover  { border-color: var(--purple); }
+.theme-art .ch-card::before{ background: linear-gradient(90deg, var(--purple), #a78bfa); }
+.theme-art .ch-num         { color: var(--purple); }
+
+/* UP Special */
+.theme-up .subj-icon      { background: var(--rose-lt); }
+.theme-up .subject-header::after { background: var(--rose); }
+.theme-up .subj-count     { background: var(--rose-lt); color: var(--rose); }
+.theme-up .ch-card:hover  { border-color: var(--rose); }
+.theme-up .ch-card::before{ background: linear-gradient(90deg, var(--rose), #fb7185); }
+.theme-up .ch-num         { color: var(--rose); }
+
+/* Ethics */
+.theme-ethics .subj-icon      { background: #fdf4ff; }
+.theme-ethics .subject-header::after { background: #a21caf; }
+.theme-ethics .subj-count     { background: #fdf4ff; color: #a21caf; }
+.theme-ethics .ch-card:hover  { border-color: #a21caf; }
+.theme-ethics .ch-card::before{ background: linear-gradient(90deg, #a21caf, #e879f9); }
+.theme-ethics .ch-num         { color: #a21caf; }
+
+/* ══════════════════════════════════════════════
+   PROGRESS BAR SECTION
+══════════════════════════════════════════════ */
+.progress-section {
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  border: 1.5px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow);
+}
+.progress-section h3 {
+  font-family: 'Baloo 2', sans-serif; font-size: 1rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 1rem;
+}
+.prog-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+  gap: 0.8rem;
+}
+.prog-item {}
+.prog-label {
+  display: flex; justify-content: space-between;
+  font-size: 0.8rem; margin-bottom: 0.3rem; font-weight: 600;
+}
+.prog-bar {
+  height: 6px; background: var(--border);
+  border-radius: 100px; overflow: hidden;
+}
+.prog-fill {
+  height: 100%; border-radius: 100px;
+  transition: width 1s ease;
+}
+
+/* ══════════════════════════════════════════════
+   QUICK LINKS
+══════════════════════════════════════════════ */
+.quick-links {
+  display: flex; gap: 0.6rem; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.ql {
+  display: flex; align-items: center; gap: 0.4rem;
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: 10px; padding: 0.55rem 1rem;
+  font-family: 'Baloo 2', sans-serif; font-size: 0.82rem; font-weight: 600;
+  color: var(--ink); text-decoration: none; cursor: pointer;
+  transition: all 0.2s;
+}
+.ql:hover {
+  background: var(--blue); color: #fff; border-color: var(--blue);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════════════
+   ANNOUNCEMENT BANNER
+══════════════════════════════════════════════ */
+.banner {
+  background: linear-gradient(90deg, var(--saffron) 0%, var(--saffron-dk) 100%);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.banner-icon { font-size: 1.8rem; flex-shrink: 0; }
+.banner-text { color: #fff; }
+.banner-text strong { display: block; font-family: 'Baloo 2', sans-serif; font-size: 0.95rem; }
+.banner-text span { font-size: 0.82rem; opacity: 0.85; }
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.5);
+  text-align: center; padding: 2rem 1rem;
+  font-size: 0.82rem;
+}
+footer strong { color: rgba(255,255,255,0.85); }
+
+/* ══════════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.subject-section {
+  animation: fadeUp 0.5s ease both;
+}
+.subject-section:nth-child(1) { animation-delay: 0.05s; }
+.subject-section:nth-child(2) { animation-delay: 0.10s; }
+.subject-section:nth-child(3) { animation-delay: 0.15s; }
+.subject-section:nth-child(4) { animation-delay: 0.20s; }
+.subject-section:nth-child(5) { animation-delay: 0.25s; }
+.subject-section:nth-child(6) { animation-delay: 0.30s; }
+.subject-section:nth-child(7) { animation-delay: 0.35s; }
+.subject-section:nth-child(8) { animation-delay: 0.40s; }
+.subject-section:nth-child(9) { animation-delay: 0.45s; }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-badge { display: none; }
+  .chapters-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .search-inner { flex-direction: column; }
+  .main-wrap { padding: 1.5rem 1rem 4rem; }
+}
+@media (max-width: 480px) {
+  .chapters-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 1.2rem; }
+}
+
+/* ══════════════════════════════════════════════
+   FLOATING NAV DOT
+══════════════════════════════════════════════ */
+.float-top {
+  position: fixed; bottom: 2rem; right: 2rem;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--saffron); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; cursor: pointer; z-index: 99;
+  box-shadow: 0 4px 16px rgba(232,93,4,0.4);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.float-top:hover { transform: translateY(-3px); }
+
+/* ══════════════════════════════════════════════
+   STICKY SUBJECT NAV
+══════════════════════════════════════════════ */
+.subj-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.subj-nav::-webkit-scrollbar { display: none; }
+.subj-nav-inner {
+  display: flex; gap: 0;
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 2rem;
+}
+.snav-item {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.7rem 1rem;
+  font-family: 'Baloo 2', sans-serif; font-size: 0.8rem; font-weight: 600;
+  color: var(--muted); text-decoration: none; white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s; cursor: pointer;
+}
+.snav-item:hover { color: var(--ink); border-bottom-color: var(--saffron); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ TRICOLOR ══════════════ -->
+<div class="tricolor"></div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">🇮🇳 &nbsp; उत्तर प्रदेश लोक सेवा आयोग</div>
+      <h1>UPPSC <span>सम्पूर्ण</span> नोट्स</h1>
+      <p class="hero-sub">सभी विषयों की चैप्टरवाइज़ अध्ययन सामग्री – UPSC · UPPSC · BPSC · HSSC · RO/ARO परीक्षाओं के लिए</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">9</div><div class="stat-label">विषय</div></div>
+        <div class="stat"><div class="stat-num">120+</div><div class="stat-label">अध्याय</div></div>
+        <div class="stat"><div class="stat-num">1500+</div><div class="stat-label">प्रश्न</div></div>
+        <div class="stat"><div class="stat-num">हिंदी</div><div class="stat-label">माध्यम</div></div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="icon">📚</div>
+      <p>Free &<br>Open Source</p>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ SEARCH ══════════════ -->
+<div class="search-wrap">
+  <div class="search-inner">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="अध्याय खोजें... जैसे: मौर्य साम्राज्य, मानसून, संविधान...">
+    </div>
+    <div class="exam-pills">
+      <span class="epill active">UPPSC</span>
+      <span class="epill">UPSC</span>
+      <span class="epill">BPSC</span>
+      <span class="epill">RO/ARO</span>
+      <span class="epill">HSSC</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ STICKY SUBJECT NAV ══════════════ -->
+<nav class="subj-nav">
+  <div class="subj-nav-inner">
+    <a class="snav-item" href="#history">🏛️ इतिहास</a>
+    <a class="snav-item" href="#geography">🗺️ भूगोल</a>
+    <a class="snav-item" href="#polity">⚖️ राज्यव्यवस्था</a>
+    <a class="snav-item" href="#economy">📈 अर्थव्यवस्था</a>
+    <a class="snav-item" href="#science">🔬 विज्ञान</a>
+    <a class="snav-item" href="#environment">🌿 पर्यावरण</a>
+    <a class="snav-item" href="#art">🎨 कला-संस्कृति</a>
+    <a class="snav-item" href="#up-special">🏙️ UP विशेष</a>
+    <a class="snav-item" href="#ethics">🧭 नीतिशास्त्र</a>
+  </div>
+</nav>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<main class="main-wrap">
+
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-icon">📢</div>
+    <div class="banner-text">
+      <strong>नवीनतम: UPPSC PCS 2024 पाठ्यक्रम के अनुसार सामग्री अपडेट की जा रही है।</strong>
+      <span>✅ पूर्ण &nbsp; 🔄 प्रगतिरत &nbsp; 🔒 शीघ्र आ रहा है — नियमित देखते रहें!</span>
+    </div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="quick-links">
+    <a class="ql" href="#">📋 पाठ्यक्रम PDF</a>
+    <a class="ql" href="#">📅 परीक्षा कैलेंडर</a>
+    <a class="ql" href="#">📝 पिछले वर्ष के प्रश्न</a>
+    <a class="ql" href="#">🗂️ करेंट अफेयर्स</a>
+    <a class="ql" href="#">🗺️ मानचित्र अभ्यास</a>
+    <a class="ql" href="#">🧠 MCQ टेस्ट</a>
+    <a class="ql" href="#">📖 UP GK</a>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-section">
+    <h3>📊 विषयवार प्रगति</h3>
+    <div class="prog-grid">
+      <div class="prog-item">
+        <div class="prog-label"><span>इतिहास</span><span>45%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:45%;background:var(--saffron)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>भूगोल</span><span>38%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:38%;background:var(--green)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>राज्यव्यवस्था</span><span>55%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:55%;background:var(--blue-mid)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>अर्थव्यवस्था</span><span>30%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:30%;background:var(--gold)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>विज्ञान</span><span>20%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:20%;background:var(--teal)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>पर्यावरण</span><span>25%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:25%;background:#16a34a"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>कला-संस्कृति</span><span>15%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:15%;background:var(--purple)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>UP विशेष</span><span>10%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:10%;background:var(--rose)"></div></div>
+      </div>
+      <div class="prog-item">
+        <div class="prog-label"><span>नीतिशास्त्र</span><span>12%</span></div>
+        <div class="prog-bar"><div class="prog-fill" style="width:12%;background:#a21caf"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       1. इतिहास
+  ════════════════════════════════ -->
+  <section class="subject-section theme-history" id="history">
+    <div class="subject-header">
+      <div class="subj-icon">🏛️</div>
+      <h2>भारतीय इतिहास <small>Indian History</small></h2>
+      <div class="subj-count">15 अध्याय</div>
+    </div>
+
+    <div style="margin-bottom:0.7rem;">
+      <strong style="font-size:0.82rem;color:var(--muted);font-family:'Baloo 2',sans-serif;">प्राचीन भारत</strong>
+    </div>
+    <div class="chapters-grid" id="history-grid">
+      <a class="ch-card" href="history/ch01-kya-kab-kahan-kaise.html">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">क्या, कब, कहाँ और कैसे?</div>
+        <div class="ch-tags">
+          <span class="ch-tag badge-done">✅ पूर्ण</span>
+          <span class="ch-tag" style="background:var(--saffron-lt);color:var(--saffron);">NCERT कक्षा 6</span>
+        </div>
+        <div class="ch-meta">📖 पाण्डुलिपि · अभिलेख · पुरातत्व</div>
+      </a>
+      <a class="ch-card" href="history/ch02-aadimanav.html">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">आदिमानव से कृषि तक – प्रागैतिहासिक काल</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">🪨 पाषाण युग · ताम्र युग</div>
+      </a>
+      <a class="ch-card" href="history/ch03-sindhu-sabhyata.html">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">सिंधु घाटी सभ्यता (हड़प्पा सभ्यता)</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">🏙️ नगर योजना · व्यापार</div>
+      </a>
+      <a class="ch-card" href="history/ch04-vedic-kaal.html">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">वैदिक काल – ऋग्वेद से उत्तर वैदिक काल</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">📜 ऋग्वेद · यजुर्वेद · अथर्ववेद</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">महाजनपद युग एवं मगध साम्राज्य</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🏰 16 महाजनपद · मगध</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">मौर्य साम्राज्य – चंद्रगुप्त से अशोक</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🦁 चंद्रगुप्त · बिन्दुसार · अशोक</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">मौर्योत्तर काल – शुंग, कण्व, सातवाहन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">⚔️ विदेशी आक्रमण</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">गुप्त साम्राज्य – भारत का स्वर्ण युग</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">✨ चंद्रगुप्त I · समुद्रगुप्त</div>
+      </a>
+
+      <!-- Medieval -->
+      <div style="grid-column:1/-1;padding-top:0.5rem;">
+        <strong style="font-size:0.82rem;color:var(--muted);font-family:'Baloo 2',sans-serif;">मध्यकालीन भारत</strong>
+      </div>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 9</div>
+        <div class="ch-title">दिल्ली सल्तनत – गुलाम से लोदी वंश</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🕌 दास वंश · खिलजी · तुगलक</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 10</div>
+        <div class="ch-title">मुगल साम्राज्य – बाबर से औरंगजेब</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">👑 अकबर · शाहजहाँ · औरंगजेब</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 11</div>
+        <div class="ch-title">मराठा साम्राज्य – शिवाजी एवं पेशवा</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🛡️ शिवाजी · पानीपत</div>
+      </a>
+
+      <!-- Modern -->
+      <div style="grid-column:1/-1;padding-top:0.5rem;">
+        <strong style="font-size:0.82rem;color:var(--muted);font-family:'Baloo 2',sans-serif;">आधुनिक भारत</strong>
+      </div>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 12</div>
+        <div class="ch-title">ब्रिटिश शासन की स्थापना एवं विस्तार</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏴 ईस्ट इंडिया कंपनी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 13</div>
+        <div class="ch-title">1857 का विद्रोह – प्रथम स्वतंत्रता संग्राम</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">⚔️ मंगल पांडे · झाँसी की रानी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 14</div>
+        <div class="ch-title">राष्ट्रीय आन्दोलन – 1885 से 1947</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🇮🇳 गाँधी · नेहरू · सुभाष</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 15</div>
+        <div class="ch-title">स्वतंत्रता एवं विभाजन – 1947</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">✌️ माउंटबेटन · रेडक्लिफ</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       2. भूगोल
+  ════════════════════════════════ -->
+  <section class="subject-section theme-geo" id="geography">
+    <div class="subject-header">
+      <div class="subj-icon">🗺️</div>
+      <h2>भूगोल <small>Geography</small></h2>
+      <div class="subj-count">14 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <div style="grid-column:1/-1;"><strong style="font-size:0.82rem;color:var(--muted);font-family:'Baloo 2',sans-serif;">भारत का भूगोल</strong></div>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">भारत – स्थिति एवं विस्तार</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">📍 अक्षांश · देशांतर · पड़ोसी देश</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">भारत की भौतिक संरचना – पर्वत, मैदान, पठार</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">⛰️ हिमालय · प्रायद्वीपीय पठार</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">भारत की नदियाँ – हिमालयी एवं प्रायद्वीपीय</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">🌊 गंगा · यमुना · कृष्णा · गोदावरी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">भारत की जलवायु – मानसून एवं ऋतुएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🌧️ मानसून · वर्षा वितरण</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">मृदा एवं वनस्पति</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🌱 काली मिट्टी · लाल मिट्टी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">कृषि – फसलें, सिंचाई एवं कृषि क्रांतियाँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌾 हरित क्रांति · MSP</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">खनिज संसाधन एवं ऊर्जा</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">⛏️ कोयला · तेल · गैस</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">उद्योग – प्रमुख औद्योगिक क्षेत्र</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏭 इस्पात · वस्त्र · सूचना प्रौद्योगिकी</div>
+      </a>
+      <div style="grid-column:1/-1;padding-top:0.5rem;"><strong style="font-size:0.82rem;color:var(--muted);font-family:'Baloo 2',sans-serif;">विश्व भूगोल</strong></div>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 9</div>
+        <div class="ch-title">पृथ्वी की संरचना एवं भू-आकृतिक प्रक्रियाएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌍 भूकंप · ज्वालामुखी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 10</div>
+        <div class="ch-title">वायुमंडल एवं जलवायु परिवर्तन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌬️ जेट स्ट्रीम · ENSO</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 11</div>
+        <div class="ch-title">विश्व के महासागर एवं समुद्री धाराएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌊 प्रशांत · हिंद · अटलांटिक</div>
+      </a>
+      <div style="grid-column:1/-1;padding-top:0.5rem;"><strong style="font-size:0.82rem;color:var(--muted);font-family:'Baloo 2',sans-serif;">उत्तर प्रदेश का भूगोल</strong></div>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 12</div>
+        <div class="ch-title">उत्तर प्रदेश – स्थिति, जलवायु एवं नदियाँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏙️ गंगा-यमुना दोआब</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 13</div>
+        <div class="ch-title">UP के प्रमुख जिले, मंडल एवं संभाग</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🗂️ 75 जिले · 18 मंडल</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 14</div>
+        <div class="ch-title">UP की कृषि, उद्योग एवं परिवहन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🚂 एक्सप्रेसवे · हाईवे</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       3. राज्यव्यवस्था
+  ════════════════════════════════ -->
+  <section class="subject-section theme-polity" id="polity">
+    <div class="subject-header">
+      <div class="subj-icon">⚖️</div>
+      <h2>भारतीय राज्यव्यवस्था एवं संविधान <small>Indian Polity & Constitution</small></h2>
+      <div class="subj-count">16 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">संविधान की प्रस्तावना एवं विशेषताएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">📜 संप्रभु · समाजवादी · धर्मनिरपेक्ष</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">मूल अधिकार (अनुच्छेद 12–35)</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">🔐 समानता · स्वतंत्रता · शोषण</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">राज्य के नीति-निदेशक तत्व एवं मूल कर्तव्य</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">📋 DPSP · अनुच्छेद 51A</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">संसद – लोकसभा एवं राज्यसभा</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🏛️ विधायी प्रक्रिया · समितियाँ</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">राष्ट्रपति, उपराष्ट्रपति एवं प्रधानमंत्री</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">👤 अनुच्छेद 52–78</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">न्यायपालिका – सर्वोच्च न्यायालय एवं उच्च न्यायालय</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">⚖️ PIL · न्यायिक समीक्षा</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">राज्य विधानमंडल – विधानसभा एवं विधानपरिषद</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏛️ राज्यपाल · मुख्यमंत्री</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">स्थानीय स्वशासन – 73वाँ एवं 74वाँ संशोधन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏘️ पंचायती राज · नगरपालिका</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 9</div>
+        <div class="ch-title">चुनाव आयोग एवं निर्वाचन प्रक्रिया</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🗳️ EVM · आदर्श आचार संहिता</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 10</div>
+        <div class="ch-title">संवैधानिक संशोधन – प्रमुख संशोधन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📝 42वाँ · 44वाँ · 101वाँ</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 11</div>
+        <div class="ch-title">आपातकालीन प्रावधान (अनुच्छेद 352–360)</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🚨 राष्ट्रीय · राज्य · वित्तीय</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 12</div>
+        <div class="ch-title">केंद्र-राज्य संबंध एवं अनुसूचियाँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📋 7वीं अनुसूची · संघ सूची</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 13</div>
+        <div class="ch-title">संवैधानिक निकाय – CAG, UPSC, Finance Commission</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏦 CAG · UPSC · Finance</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 14</div>
+        <div class="ch-title">UP विधानसभा एवं राज्य प्रशासन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏙️ 403 विधानसभा सीटें</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 15</div>
+        <div class="ch-title">लोकपाल, RTI एवं पारदर्शिता कानून</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📂 RTI 2005 · Lokpal</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 16</div>
+        <div class="ch-title">अनुसूचित जाति/जनजाति एवं OBC प्रावधान</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🤝 आरक्षण · अनुच्छेद 15,16</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       4. अर्थव्यवस्था
+  ════════════════════════════════ -->
+  <section class="subject-section theme-eco" id="economy">
+    <div class="subject-header">
+      <div class="subj-icon">📈</div>
+      <h2>भारतीय अर्थव्यवस्था <small>Indian Economy</small></h2>
+      <div class="subj-count">13 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">राष्ट्रीय आय – GDP, GNP, NDP</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">💹 GDP · GVA · प्रति व्यक्ति आय</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">योजना आयोग से NITI आयोग</div>
+        <div class="ch-tags"><span class="ch-tag badge-done">✅ पूर्ण</span></div>
+        <div class="ch-meta">📊 पंचवर्षीय योजनाएँ</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">केंद्रीय बजट एवं राजकोषीय नीति</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">💰 FRBM · राजकोषीय घाटा</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">RBI एवं मौद्रिक नीति</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🏦 रेपो दर · CRR · SLR</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">GST – वस्तु एवं सेवा कर</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🧾 101वाँ संशोधन · GST काउंसिल</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">कृषि क्षेत्र – MSP, FCI, कृषि बाजार</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌾 PM-KISAN · FPO</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">गरीबी, बेरोजगारी एवं सामाजिक सुरक्षा</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">👥 MNREGA · PM आवास</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">अंतर्राष्ट्रीय व्यापार एवं भुगतान संतुलन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌐 WTO · FDI · FPI</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 9</div>
+        <div class="ch-title">बैंकिंग क्षेत्र – NPA, बैंक विलय</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏦 PSB · NPA · IBC</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 10</div>
+        <div class="ch-title">UP की अर्थव्यवस्था – GSDP एवं प्रमुख क्षेत्र</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏙️ ODOP · इन्वेस्ट UP</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 11</div>
+        <div class="ch-title">डिजिटल अर्थव्यवस्था – UPI, Fintech</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📱 UPI · Jan Dhan · CBDC</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 12</div>
+        <div class="ch-title">प्रमुख सरकारी योजनाएँ 2014–2024</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📋 PM योजनाएँ · मिशन</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 13</div>
+        <div class="ch-title">आर्थिक सर्वेक्षण एवं बजट 2024-25</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">📄 Economic Survey · Union Budget</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       5. विज्ञान एवं प्रौद्योगिकी
+  ════════════════════════════════ -->
+  <section class="subject-section theme-sci" id="science">
+    <div class="subject-header">
+      <div class="subj-icon">🔬</div>
+      <h2>विज्ञान एवं प्रौद्योगिकी <small>Science & Technology</small></h2>
+      <div class="subj-count">12 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">अंतरिक्ष विज्ञान – ISRO, Chandrayaan, Gaganyaan</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">🚀 ISRO · मिशन · उपग्रह</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">परमाणु ऊर्जा एवं रक्षा प्रौद्योगिकी</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">⚛️ DAE · DRDO · मिसाइल</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">जैव प्रौद्योगिकी एवं आनुवंशिकी</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🧬 DNA · GM Crop · CRISPR</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">सूचना एवं संचार प्रौद्योगिकी – AI, 5G</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🤖 AI · ML · IoT · 5G</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">स्वास्थ्य विज्ञान – रोग, टीके एवं अनुसंधान</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">💉 COVID · टीकाकरण · ICMR</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">नवीकरणीय ऊर्जा – सौर, पवन, हाइड्रोजन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">☀️ Solar · Wind · Green H₂</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">नैनो तकनीक एवं सामग्री विज्ञान</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🔭 Nanotechnology</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">साइबर सुरक्षा एवं डेटा संरक्षण</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🔐 CERT-In · PDPB</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       6. पर्यावरण
+  ════════════════════════════════ -->
+  <section class="subject-section theme-env" id="environment">
+    <div class="subject-header">
+      <div class="subj-icon">🌿</div>
+      <h2>पर्यावरण एवं पारिस्थितिकी <small>Environment & Ecology</small></h2>
+      <div class="subj-count">10 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">पारिस्थितिकी तंत्र – संरचना एवं कार्य</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌿 खाद्य श्रृंखला · जैव विविधता</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">जैव विविधता – संरक्षण एवं हॉटस्पॉट</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🦁 हॉटस्पॉट · संरक्षित क्षेत्र</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">जलवायु परिवर्तन – UNFCCC, Paris Agreement</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌡️ Paris COP · NDC · Net Zero</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">प्रदूषण – वायु, जल, मृदा, ध्वनि</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🌫️ AQI · PM 2.5 · Stubble Burning</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">राष्ट्रीय उद्यान, अभयारण्य एवं रामसर स्थल</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🐯 Tiger Reserve · Ramsar</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">पर्यावरण कानून – EPA, वन्य जीव संरक्षण अधिनियम</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📋 EPA 1986 · WPA 1972</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">UP के प्रमुख वन्य जीव अभयारण्य</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🦚 दुधवा · पीलीभीत · चंद्रप्रभा</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       7. कला एवं संस्कृति
+  ════════════════════════════════ -->
+  <section class="subject-section theme-art" id="art">
+    <div class="subject-header">
+      <div class="subj-icon">🎨</div>
+      <h2>कला, संस्कृति एवं विरासत <small>Art, Culture & Heritage</small></h2>
+      <div class="subj-count">11 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">भारतीय स्थापत्य कला – मंदिर, मस्जिद, किले</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏯 नागर · द्रविड़ · वेसर शैली</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">भारतीय चित्रकला – अजंता से राजपूत शैली</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🖌️ मुगल · पहाड़ी · बंगाल</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">भारतीय संगीत एवं नृत्य परम्पराएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🎵 शास्त्रीय · लोक · कथक</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">UNESCO विश्व धरोहर स्थल – भारत</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏛️ 42 स्थल · ताजमहल · हम्पी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">धर्म एवं दर्शन – हिंदू, बौद्ध, जैन, सिख</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🕌 वेद · बौद्ध धर्म · जैन</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">भारतीय साहित्य – संस्कृत से आधुनिक</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📖 वेद · रामायण · प्रेमचंद</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">UP की कला एवं संस्कृति – विशेष</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🪔 कथक · चिकनकारी · बनारसी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">भारतीय त्योहार एवं मेले</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🎉 कुंभ · दिवाली · होली</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       8. UP विशेष
+  ════════════════════════════════ -->
+  <section class="subject-section theme-up" id="up-special">
+    <div class="subject-header">
+      <div class="subj-icon">🏙️</div>
+      <h2>उत्तर प्रदेश विशेष <small>Uttar Pradesh Special</small></h2>
+      <div class="subj-count">12 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">UP का इतिहास – प्राचीन से आधुनिक</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏛️ काशी · अयोध्या · मथुरा</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">UP का प्रशासनिक ढाँचा – जिले, मंडल</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🗂️ 75 जिले · 18 मंडल · 4 क्षेत्र</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">UP के प्रमुख राजनीतिक दल एवं चुनाव</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🗳️ विधानसभा · लोकसभा</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">UP के मुख्यमंत्री एवं राज्यपाल सूची</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">👤 CM से अब तक का इतिहास</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">UP की प्रमुख सरकारी योजनाएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📋 CM योगी की योजनाएँ</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">UP के प्रमुख उद्योग एवं ODOP</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏭 One District One Product</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 7</div>
+        <div class="ch-title">UP के धार्मिक स्थल एवं पर्यटन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🕌 काशी · अयोध्या · वृंदावन</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 8</div>
+        <div class="ch-title">UP के प्रमुख व्यक्तित्व</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">👤 नेहरू · अटल · मुलायम</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 9</div>
+        <div class="ch-title">UP की जनजातियाँ एवं समाज</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">👥 थारू · बुक्सा · जौनसारी</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 10</div>
+        <div class="ch-title">UP GK करेंट अफेयर्स 2024</div>
+        <div class="ch-tags"><span class="ch-tag badge-progress">🔄 प्रगतिरत</span></div>
+        <div class="ch-meta">📰 ताज़ा घटनाएँ</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       9. नीतिशास्त्र
+  ════════════════════════════════ -->
+  <section class="subject-section theme-ethics" id="ethics">
+    <div class="subject-header">
+      <div class="subj-icon">🧭</div>
+      <h2>नीतिशास्त्र, सत्यनिष्ठा एवं अभिरुचि <small>Ethics, Integrity & Aptitude</small></h2>
+      <div class="subj-count">8 अध्याय</div>
+    </div>
+    <div class="chapters-grid">
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 1</div>
+        <div class="ch-title">नीतिशास्त्र के आधार – नैतिकता एवं मूल्य</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🧭 नैतिकता · मूल्य · अभिरुचि</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 2</div>
+        <div class="ch-title">महान दार्शनिकों का नैतिक दर्शन</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📚 गाँधी · आंबेडकर · अरस्तू</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 3</div>
+        <div class="ch-title">लोक सेवा में नीतिशास्त्र</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🏛️ IAS आचार संहिता · सत्यनिष्ठा</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 4</div>
+        <div class="ch-title">भावनात्मक बुद्धिमत्ता (EQ)</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🧠 EQ · आत्म-जागरूकता</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 5</div>
+        <div class="ch-title">केस स्टडी – नैतिक दुविधाएँ</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">📋 परीक्षा में केस हल करना</div>
+      </a>
+      <a class="ch-card" href="#">
+        <div class="ch-num">अध्याय 6</div>
+        <div class="ch-title">भ्रष्टाचार – कारण, प्रभाव एवं उपाय</div>
+        <div class="ch-tags"><span class="ch-tag badge-soon">🔒 शीघ्र</span></div>
+        <div class="ch-meta">🚫 Lokpal · Whistleblower</div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p style="margin-bottom:0.4rem;font-size:1rem;">
+    <strong>UPPSC नोट्स</strong> — सम्पूर्ण अध्ययन सामग्री हिंदी में
+  </p>
+  <p>UPSC · UPPSC · BPSC · RO/ARO · HSSC · State PSC परीक्षाओं के लिए</p>
+  <p style="margin-top:0.6rem;font-size:0.75rem;">
+    ✅ पूर्ण &nbsp;|&nbsp; 🔄 प्रगतिरत &nbsp;|&nbsp; 🔒 शीघ्र आ रहा है
+    &nbsp;|&nbsp; NCERT आधारित · निःशुल्क · ओपन सोर्स
+  </p>
+</footer>
+
+<!-- FLOAT TOP -->
+<a class="float-top" href="#" title="ऊपर जाएँ">↑</a>
+
+<!-- ══════════════ JS: SEARCH + FILTER ══════════════ -->
+<script>
+  // Search functionality
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    document.querySelectorAll('.ch-card').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = (!q || text.includes(q)) ? '' : 'none';
+    });
+    // Show/hide subject sections
+    document.querySelectorAll('.subject-section').forEach(sec => {
+      const visible = [...sec.querySelectorAll('.ch-card')]
+        .some(c => c.style.display !== 'none');
+      sec.style.display = visible ? '' : 'none';
+    });
+  });
+
+  // Exam pills toggle
+  document.querySelectorAll('.epill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.epill').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Animate progress bars on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.prog-fill').forEach(bar => {
+      const w = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => { bar.style.width = w; }, 300);
+    });
+  });
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.snav-item');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(l => {
+      l.style.color = l.getAttribute('href') === '#'+current
+        ? 'var(--saffron)' : '';
+      l.style.borderBottomColor = l.getAttribute('href') === '#'+current
+        ? 'var(--saffron)' : 'transparent';
+    });
+  });
+</script>
+</body>
+</html>
